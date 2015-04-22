@@ -385,15 +385,32 @@ unmonitor(TI.app.init);
 				</section>
 
                 <section>
-                    <h2>Profile JavaScript</h2>
-                    <ul>
-                        <li>
-                            create from JS
+                    <section>
+                        <h2>Profile JavaScript</h2>
+                        <ul>
+                            <li>
+                                create from JS
                             <pre><code>console.profile();
 ...
 console.profileEnd();   </code></pre>
-                        </li>
-                    </ul>
+                            </li>
+                            <li>
+                                visualize JS execution by time
+                                <div><small>Chart</small></div>
+                            </li>
+                            <li>
+                                find most time consuming methods
+                                <div><small>Heavy (Bottom up)</small></div>
+                            </li>
+                            <li>
+                                drill down through execution tree
+                                <div><small>Tree (Bottom up)</small></div>
+                            </li>
+                        </ul>
+                        <p>
+                            <small><a href="http://alice.dev/womens-clothing-dresses/" target="_blank">demo</a></small>
+                        </p>
+                    </section>
                 </section>
 
                 <section>
@@ -416,27 +433,32 @@ console.profileEnd();   </code></pre>
                         <p>
                             Steady growth of lows after GC cycles indicate memory leaks.
                         </p>
-                        <small>
-                            <a href="http://alice.dev/womens-clothing-dresses/" target="_blank">demo</a>
-                        </small>
+                        <p>
+                            <small>
+                                <a href="http://alice.dev/womens-clothing-dresses/" target="_blank">demo</a>
+                            </small>
+                        </p>
                     </section>
                     <section>
                         <h2>Create Heap Profile</h2>
                         <ul>
+                            <li>open incognito Window</li>
                             <li>select Record Heap Allocations and hit start</li>
                             <li>execute actions and repeat at least 5 times</li>
                             <li>and/or force GC cycles in between</li>
                             <li>hit stop</li>
                         </ul>
-                        <small><a href="http://alice.dev/womens-clothing-dresses/" target="_blank">demo</a></small>
+                        <p>
+                            <small><a href="http://alice.dev/womens-clothing-dresses/" target="_blank">demo</a></small>
+                        </p>
                     </section>
                     <section>
                         <h2>Analyse Heap Profile</h2>
                         <ul>
-                            <li></li>
-                            <li>execute actions and repeat at least 5 times</li>
-                            <li>and/or force GC cycles in between</li>
-                            <li>hit stop</li>
+                            <li>blue lines are leftover objects</li>
+                            <li>use timeline to narrow to a section</li>
+                            <li>use Summary or Containment view to analyse objects</li>
+                            <li>use Retainers view to trace open references</li>
                         </ul>
                     </section>
                 </section>
