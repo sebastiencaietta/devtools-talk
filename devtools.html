@@ -70,19 +70,34 @@
                     </section>
                     <section>
                         <h2>Emulate Mobile Devices</h2>
-                        <ul>
-                            <li>Network throttling</li>
-                            <li>Touch emulation</li>
-                            <li>Accelerometer</li>
-                            <li>Add device in settings</li>
-                        </ul>
+                        <div class="fragment">
+                            <ul>
+                                <li>Resolution, pixel ratio, orientation</li>
+                                <li>Touch emulation</li>
+                                <li>Network throttling</li>
+                                <li>Accelerometer</li>
+                                <li>Add device in settings</li>
+                            </ul>                        
+                        </div>
+    
                     </section>
                     <section>
                         <h2>Remote debug actual devices</h2>
-                        <ul>
-                            <li>Android Master Race: Enable USB debugging via<br/>chrome://inspect</li>
-                            <li>iOS peasants: Available through safari with iOS6</li>
-                        </ul>
+                        
+                        <div class="fragment">
+                            <h3>Android Master Race</h3>
+                            <ol>
+                                <li>Enable USB debugging.</li>
+                                <li>http://chrome://inspect</li>    
+                                <li>Open Dev Tools.</li>
+                                <li>???</li>
+                                <li>Profit.</li>
+                            </ol>    
+                        </div>
+                        <br/><br/>
+                        <small class="fragment">
+                            For iOS peasants, it's available on Safari for iOS6 +
+                        </small>
 
                         <aside class="notes">
                             Chrome menu > More tools > Inspect Devices.
@@ -96,8 +111,8 @@
                         <h2>Enhance Productivity</h2>
                         <ul>
                             <li>use keyboard shortcuts</li>
-                            <li>explore settings</li>
                             <li>install Chrome Canary for experimental features</li>
+                            <li>Explore settings</li>
                         </ul>
                     </section>
                     <section>
@@ -116,24 +131,29 @@
 
                 <section>
                     <section>
-                        <h2>Console</h2>
+                        <h2>Console Settings</h2>
+                        <img data-src="/img/console-settings.png">
                         <ul>
-                            <li>preserve logs</li>
-                            <li>Filter (shown by default ?)</li>
+                            <li>Preserve logs</li>
+                            <li>Filters</li>
+                            <li>Log XHR requests</li>
                             <li>Show Timestamps setting</li>
+                            <li>Frame selector</li>
                         </ul>
                     </section>
                     <section>
                         <h2>console.log</h2>
                         <ul>
                             <li>
-                                supports string substitution
-                                <pre data-trim><code data-trim>console.log("%s has %d points", "Sam", 100);</code></pre>
+                                Supports string substitution
+                                <pre data-trim style="width:100%;"><code data-trim>console.log("%s has %dpoints", "Sam", 100);</code></pre>
+                                Also %c for styles and %o / %O for nodes
                             </li>
                             <li>Siblings: warn(), error(), info(), debug()</li>
-                            <li>grouping with group(), groupEnd()</li>
-                            <li>log data in table format: table()</li>
-                            <li>log timing with time(), timeEnd()</li>
+                            <li>Grouping with group(), groupEnd()</li>
+                            <li>Log data in table format: table()</li>
+                            <li>Log timing with time(), timeEnd()</li>
+                            <li>$_ return last expression result</li>
                         </ul>
                     </section>
                     <section>
@@ -153,6 +173,7 @@
                         <pre data-trim><code data-trim>
                             inspect($1);
                         </code></pre>
+                        <img data-src="/img/console-inspect.png">
                     </section>
                     <section>
                         <h2>Monitor events and functions</h2>
@@ -221,29 +242,23 @@ unmonitor(TI.app.init);
                     </section>
                     <section>
                         <h2>Life-editing SASS files</h2>
-                        <ul>
-                            <li>Compass 1.0 & SASS 3.4</li>
-                            <li>add {sourcemap => true} in config.rb</li>
-                            <li>remove hashes in Assetic</li>
-                            <li>enable css source maps</li>
-                            <li>add folder to workspace</li>
-                            <li>map files to network</li>
-                            <li>compass watch</li>
-                        </ul>
-                        <small><a href=http://alice.dev/customer/account/details" target="_blank">demo</a></small>
-                        <aside class="notes">
-                            Life editing : Add {sourcemap => true} in config.rb, remove hashes in Assetic, enable css source maps, add folder to workspace, map files to network, compass watch, tadaaa http://alice.dev/customer/account/details
-                        </aside>
+                        <ol>
+                            <li>Compass 1.0 + SASS 3.4</li>
+                            <li>Add {sourcemap => true} in config.rb</li>
+                            <li>Remove hashes in Assetic</li>
+                            <li>Enable css source maps in DevTools</li>
+                            <li>Add folder to workspace</li>
+                            <li>Map files to network</li>
+                            <li>Compass watch</li>
+                        </ol>
+                        <small><a href="http://alice.dev/customer/account/details" target="_blank">Demo</a></small>
                     </section>
                     <section>
                         <h2>Content Scripts / Snippets</h2>
                         <ul>
-                            <li>save javascript snippets</li>
-                            <li>with internal history</li>
+                            <li>Save javascript snippets</li>
+                            <li>With internal history</li>
                         </ul>
-                        <aside class="notes">
-                            History : snippets trick
-                        </aside>
                     </section>
                 </section>
 
@@ -251,12 +266,15 @@ unmonitor(TI.app.init);
                     <section>
                         <h2>Debug JavaScript</h2>
                         <ul>
-                            <li>debugger; in js files</li>
-                            <li>xhr/dom/listeners/regular (conditional) breakpoints</li>
-                            <li>scope variables per closure</li>
-                            <li>watch expressions / call stack</li>
+                            <li>Break with debugger; in js files or regular breakpoints</li>
+                            <li>XHR/DOM/Conditional breakpoints</li>
+                            <li>Scope variables per closure</li>
+                            <li>Call stack</li>
+                            <li>Watch expressions</li>
                         </ul>
-                        <small><a href="http://alice.dev/cart" target="_blank">demo</a></small>
+                        <div class="fragment">
+                            <p><a href="http://alice.dev/cart" target="_blank">demo</a></p>
+                        </div>
                     </section>
                 </section>
 
