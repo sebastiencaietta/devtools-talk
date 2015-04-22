@@ -16,6 +16,7 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+        <link rel="stylesheet" href="css/extras.css">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -49,6 +50,7 @@
                     <ul>
                         <li>Mobile Devices</li>
                         <li>Enhance Productivity</li>
+                        <li>Use the Console</li>
                         <li>Inspect Elements</li>
                         <li>SASS Life-editing</li>
                         <li>Debug JavaScript</li>
@@ -108,6 +110,7 @@
                     <section>
                         <h2>Enhance Productivity</h2>
                         <ul>
+                            <li>use keyboard shortcuts</li>
                             <li>install Chrome Canary for experimental features</li>
                             <li>Explore settings</li>
                         </ul>
@@ -115,14 +118,13 @@
                     <section>
                         <h2>Use the keyboard</h2>
                         <ul>
-                            <li>Cmd + Opt + i - toggle dev tools</li>
-                            <li>Cmd + Opt + j - toggle dev tools focusing on the console</li>
-                            <li>Esc - toggle Console drawer</li>
-                            <li>Use Cmd + 0/-/+ to zoom</li>
-                            <li>Enable Cmd + 1-9 shortcut to switch panels</li>
-                            <li>Cmd + O - open any loaded file anytime</li>
-                            <li>Cmd + Shift + F - search for text in loaded files anytime</li>
-                            <li>Full list in Settings -> Shortcuts</li>
+                            <li><span class="kbd">Cmd</span><span class="kbd">Opt</span><span class="kbd">I</span> - toggle dev tools</li>
+                            <li><span class="kbd">Esc</span> - toggle Console drawer</li>
+                            <li>use <span class="kbd">Cmd</span>(<span class="kbd">0</span>/<span class="kbd">-</span>/<span class="kbd">+</span>) to zoom</li>
+                            <li>Enable <span class="kbd">Cmd</span>(<span class="kbd">1</span>-<span class="kbd">9</span>) shortcut to switch panels</li>
+                            <li><span class="kbd">Cmd</span><span class="kbd">O</span> - open any loaded file anytime</li>
+                            <li><span class="kbd">Cmd</span><span class="kbd">Shift</span><span class="kbd">F</span> - search for text in loaded files anytime</li>
+                            <li>full list in Settings -> Shortcuts</li>
                         </ul>
                     </section>
                 </section>
@@ -157,9 +159,9 @@
                     <section>
                         <h2>Element selection</h2>
                         <ul>
-                            <li>$() - return first element</li>
-                            <li>$$() - return all elements</li>
-                            <li>$x() - resolve xpath</li>
+                            <li>$(...) - return first element</li>
+                            <li>$$(...) - return all elements</li>
+                            <li>$x(...) - resolve xpath</li>
                         </ul>
                     </section>
                     <section>
@@ -174,17 +176,22 @@
                         <img data-src="/img/console-inspect.png">
                     </section>
                     <section>
-                        <h2>Monitor Events</h2>
+                        <h2>Monitor events and functions</h2>
                         <pre data-trim><code data-trim>
 monitorEvents(window, ["resize", “scroll"]);
 unmonitorEvents(window, ["resize", “scroll"]);
+getEventListeners($0) - list event listeners of selected object
+monitor(TI.app.init);
+unmonitor(TI.app.init);
                         </code></pre>
-                        <img data-src="/img/console-monitor-events.png">
                     </section>
                     <section>
                         <h2>much more</h2>
                         <ul>
-                            <li><a href="https://developer.chrome.com/devtools/docs/commandline-api">https://developer.chrome.com/devtools/docs/commandline-api</a></li>
+                            <li>clear() - clear the command line window</li>
+                            <li>copy($0) - copy string representation of selected object to clipboard</li>
+                            <li>dir($0) - object representation of HTML nodes</li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/commandline-api">Commandline API documentation</a></li>
                         </ul>
                     </section>
                 </section>
@@ -227,9 +234,9 @@ unmonitorEvents(window, ["resize", “scroll"]);
                     <section>
                         <h2>Sources</h2>
                         <ul>
-                            <li>Cmd-O/Cmd-P to open any file from anywhere</li>
-                            <li>Cmd-Shift-F from anywhere to find stuff in any files</li>
-                            <li>Cmd-Shift-O to find methods/selectors within that file</li>
+                            <li><span class="kbd">Cmd</span><span class="kbd">O</span> or <span class="kbd">Cmd</span><span class="kbd">P</span> to open any file from anywhere</li>
+                            <li><span class="kbd">Cmd</span><span class="kbd">Shift</span><span class="kbd">F</span> from anywhere to find stuff in any files</li>
+                            <li><span class="kbd">Cmd</span><span class="kbd">Shift</span><span class="kbd">O</span> to find methods/selectors within that file</li>
                             <li>use pretty-print {} button to reformat compacted files</li>
                         </ul>
                     </section>
@@ -371,7 +378,7 @@ unmonitorEvents(window, ["resize", “scroll"]);
                     <section>
                         <h2>Flame Chart View</h2>
                         <ul>
-                            <li>navigate via WASD keys</li>
+                            <li>use <span class="kbd">W</span><span class="kbd">A</span><span class="kbd">S</span><span class="kbd">D</span> keys to navigate</li>
                             <li>forced layouts marked by red corners</li>
                             <li>look for horizontally large strips</li>
                         </ul>
@@ -398,15 +405,58 @@ unmonitorEvents(window, ["resize", “scroll"]);
                 <section>
                     <h2>Profile JavaScript</h2>
                     <ul>
-                        <li>create from JS via console.profile(), console.profileEnd()</li>
+                        <li>
+                            create from JS
+                            <pre><code>console.profile();
+...
+console.profileEnd();   </code></pre>
+                        </li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>Debug Memory Leaks</h2>
-                    <ul>
-                        <li>...</li>
-                    </ul>
+                    <section>
+                        <h2>Debug Memory Leaks</h2>
+                        <ul>
+                            <li>identify in Timeline</li>
+                            <li>debug in Heap Profiler</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Identify memory leaks in Timeline</h2>
+                        <ul>
+                            <li>activate Memory view</li>
+                            <li>execute suspicious action(s)</li>
+                            <li>execute steps to rewind to original state</li>
+                            <li>hit trashcan button to force GC cycle</li>
+                            <li>repeat at least 5 times</li>
+                        </ul>
+                        <p>
+                            Steady growth of lows after GC cycles indicate memory leaks.
+                        </p>
+                        <small>
+                            <a href="http://alice.dev/womens-clothing-dresses/" target="_blank">demo</a>
+                        </small>
+                    </section>
+                    <section>
+                        <h2>Create Heap Profile</h2>
+                        <ul>
+                            <li>select Record Heap Allocations and hit start</li>
+                            <li>execute actions and repeat at least 5 times</li>
+                            <li>and/or force GC cycles in between</li>
+                            <li>hit stop</li>
+                        </ul>
+                        <small><a href="http://alice.dev/womens-clothing-dresses/" target="_blank">demo</a></small>
+                    </section>
+                    <section>
+                        <h2>Analyse Heap Profile</h2>
+                        <ul>
+                            <li></li>
+                            <li>execute actions and repeat at least 5 times</li>
+                            <li>and/or force GC cycles in between</li>
+                            <li>hit stop</li>
+                        </ul>
+                    </section>
                 </section>
 
                 <section>
@@ -432,18 +482,20 @@ unmonitorEvents(window, ["resize", “scroll"]);
                         <h2>Custom audits</h2>
                         <ul>
                             <li>enable chrome://flags - Experimental Extension APIs</li>
-                            <li>follow the documentation</li>
+                            <li>follow the <a href="https://developer.chrome.com/extensions/experimental_devtools_audits">documentation</a></li>
                         </ul>
                     </section>
                 </section>
 
                 <section>
 					<h2>Extending</h2>
+                    <p>It's all HTML/JS/CSS - no magic!</p>
 					<ul>
+                        <li>extensive <a href="https://developer.chrome.com/extensions/devtools">documentation</a> available</li>
 					</ul>
 				</section>
 
-                <section style="text-align: left;">
+                <section>
                     <h2>Hack it & Contribute</h2>
                     <p>It's all HTML/JS/CSS - no magic!</p>
                     <ul>
@@ -459,7 +511,7 @@ unmonitorEvents(window, ["resize", “scroll"]);
                     </p>
                 </section>
 
-				<section style="text-align: left;">
+				<section>
 					<h2>And much more...</h2>
 					<p>
                         <ul>
