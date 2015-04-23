@@ -67,42 +67,67 @@
                 <section>
                     <section>
                         <h2>Mobile Devices</h2>
+                        <small class="fragment">because mobile first...</small>
                     </section>
                     <section>
                         <h2>Emulate Mobile Devices</h2>
-                        <div class="fragment">
+                        <div>
                             <ul>
-                                <li>Resolution, pixel ratio, orientation</li>
-                                <li>Touch emulation</li>
-                                <li>Network throttling</li>
-                                <li>Accelerometer</li>
-                                <li>Add device in settings</li>
+                                <li class="fragment">
+                                    Have fun with the breakpoints
+                                    <div>
+                                        <small>
+                                            Resolution, pixel ratio, orientation        
+                                        </small>
+                                    </div>
+                                </li>
+                                <li class="fragment">
+                                    Think about another behaviour
+                                    <div>
+                                        <small>
+                                            Touch emulation, network throttling
+                                        </small>
+                                    </div>
+                                </li>
+                                <li class="fragment">
+                                    Note worthy features
+                                    <div>
+                                        <small>
+                                            Accelerometer, location emulator, custom devices
+                                        </small>
+                                    </div>
+                                </li>
                             </ul>                        
                         </div>
     
                     </section>
                     <section>
-                        <h2>Remote debug actual devices</h2>
+                        <h2>Remote debug devices</h2>
                         
                         <div class="fragment">
-                            <h3>Android Master Race</h3>
-                            <ol>
-                                <li>Enable USB debugging.</li>
-                                <li>http://chrome://inspect</li>    
-                                <li>Open Dev Tools.</li>
-                                <li>???</li>
-                                <li>Profit.</li>
-                            </ol>    
+                            <h3>Too Easy with Android</h3>
+                            <div>
+                                <small>
+                                    <ol>
+                                        <li>Enable USB debugging.</li> 
+                                        <li><a target="_blank" href="chrome://inspect">chrome://inspect</a></li>
+                                        <li>Open Dev Tools.</li>
+                                        <li>???</li>
+                                        <li>Profit.</li>
+                                    </ol>    
+                                </small>
+                            </div>
                         </div>
-                        <br/><br/>
-                        <small class="fragment">
-                            For iOS peasants, it's available on Safari for iOS6 +
-                        </small>
-
-                        <aside class="notes">
-                            Chrome menu > More tools > Inspect Devices.
-                            For app debugging: Android 4.4+ and a WebView configured for debugging.
-                        </aside>
+                        <div class="fragment" style="margin-top:20px;">
+                            <h3>App debugging</h4>
+                            <p>
+                                Android 4.4+ and a WebView configured for debugging.
+                            </p>    
+                        </div>
+                        
+                        <div class="fragment" style="margin-top:20px;">
+                            <p>iOS users, rest assured, you can do it with Safari. <img style="display:inline;border:none;background:none;vertical-align:middle;box-shadow:none;" data-src="/img/troll.png" width="45"></p>
+                        </div>
                     </section>
                 </section>
 
@@ -110,58 +135,145 @@
                     <section>
                         <h2>Enhance Productivity</h2>
                         <ul>
-                            <li>use keyboard shortcuts</li>
-                            <li>install Chrome Canary for experimental features</li>
-                            <li>Explore settings</li>
+                            <li>
+                                Get used to keyboard shortcuts...
+                                <div>
+                                    <small>...and use them!</small>
+                                </div>
+                            </li>
+                            <li>
+                                Install Chrome Canary for experimental features
+                                <div>
+                                    <small>
+                                        Or enable the Chrome Flag Devtools Experimental Features
+                                    </small>
+                                </div>
+                            </li>
+                            <li>
+                                Explore settings
+                                <div>
+                                    <small>
+                                        Disable cache, add folder to workspace, show colors as authored, enable user agent styles...
+                                    </small>
+                                </div>
+                            </li>
                         </ul>
                     </section>
                     <section>
                         <h2>Use the keyboard</h2>
                         <ul>
-                            <li><span class="kbd">Cmd</span><span class="kbd">Opt</span><span class="kbd">I</span> - toggle dev tools</li>
+                            <li>
+                                <span class="kbd">Cmd</span><span class="kbd">Opt</span><span class="kbd">I</span> - toggle dev tools
+                                <div>
+                                    <small style="vertical-align: middle;">
+                                        J to focus directly on console
+                                    </small>
+                                </div>
+                            </li>
                             <li><span class="kbd">Esc</span> - toggle Console drawer</li>
-                            <li>use <span class="kbd">Cmd</span>(<span class="kbd">0</span>/<span class="kbd">-</span>/<span class="kbd">+</span>) to zoom</li>
-                            <li>Enable <span class="kbd">Cmd</span>(<span class="kbd">1</span>-<span class="kbd">9</span>) shortcut to switch panels</li>
+                            <li>use <span class="kbd">Cmd</span>+<span class="kbd">0</span>/<span class="kbd">-</span>/<span class="kbd">+</span> to zoom</li>
+                            <li>Enable <span class="kbd">Cmd</span> + <span class="kbd">1</span>-<span class="kbd">9</span> shortcut to switch panels</li>
                             <li><span class="kbd">Cmd</span><span class="kbd">O</span> - open any loaded file anytime</li>
-                            <li><span class="kbd">Cmd</span><span class="kbd">Shift</span><span class="kbd">F</span> - search for text in loaded files anytime</li>
-                            <li>full list in Settings -> Shortcuts</li>
+                            <li>
+                                <span class="kbd">Cmd</span><span class="kbd">Shift</span><span class="kbd">F</span> - search for text in loaded files anytime
+                                <div>
+                                    <small style="vertical-align: middle;">
+                                        C to open in inspection element mode
+                                    </small>
+                                </div>
+                            </li>
+                            <li>Full list in Settings -> Shortcuts</li>
                         </ul>
                     </section>
                 </section>
 
                 <section>
+                    <section data-background-image="/img/matrix.gif">
+                        <h1>The Console</h1>
+                    </section>
                     <section>
-                        <h2>Console Settings</h2>
-                        <img data-src="/img/console-settings.png">
+                        <h2>Console Overview</h2>
                         <ul>
-                            <li>Preserve logs</li>
-                            <li>Filters</li>
-                            <li>Log XHR requests</li>
-                            <li>Show Timestamps setting</li>
-                            <li>Frame selector</li>
+                            <li class="fragment">
+                                Get the max out of the panel
+                                <div>
+                                    <small>
+                                        Preserve logs, filters, frame selector
+                                    </small>
+                                </div>
+                            </li>
+                            <li class="fragment">
+                                Don't forget the settings
+                                <div>
+                                    <small>
+                                        Log XHR requests, show timestamps...
+                                    </small>
+                                </div>
+                            </li>
                         </ul>
                     </section>
                     <section>
                         <h2>console.log</h2>
+                        <small>and some others you might now know</small>
                         <ul>
                             <li>
                                 Supports string substitution
-                                <pre data-trim style="width:100%;"><code data-trim>console.log("%s has %dpoints", "Sam", 100);</code></pre>
-                                Also %c for styles and %o / %O for nodes
+                                
+                                <div>
+                                    <small>
+                                    <pre data-trim style="width:100%;"><code data-trim>console.log("%s has %d points", "Sam", 100);</code></pre>
+                                    Also %c for css styles and %o / %O for Node/javascript representation
+                                    </small>
+                                </div>
+                                
                             </li>
-                            <li>Siblings: warn(), error(), info(), debug()</li>
-                            <li>Grouping with group(), groupEnd()</li>
-                            <li>Log data in table format: table()</li>
-                            <li>Log timing with time(), timeEnd()</li>
-                            <li>$_ return last expression result</li>
+                            <li>
+                                Use the siblings for easy filtering:
+                                <div>
+                                    <small>
+                                        warn(), error(), info(), debug()
+                                    </small>
+                                </div>
+                            </li>
+                            <li>
+                                Advanced usages
+                                <div>
+                                    <small>
+                                        Grouping with group('logging'), console.log('Getting data from DB', logging), groupEnd()
+                                    </small>
+                                    <small>
+                                        Get a call stack of your execution point with console.trace()
+                                    </small>
+                                    <small>
+                                        Log timing with time('logging'), timeEnd('logging')
+                                    </small>
+                                    <small>
+                                        Show on the timeline panel when your script is executed with console.timeStamp('my-script')
+                                    </small>
+
+                                </div>
+                            </li>
                         </ul>
                     </section>
                     <section>
-                        <h2>Element selection</h2>
+                        <h2>Devtools Command Line</h2>
                         <ul>
                             <li>$(...) - return first element</li>
                             <li>$$(...) - return all elements</li>
                             <li>$x(...) - resolve xpath</li>
+                            <li>$_ - return last result</li>
+                            <li>
+                                Inspect your data
+                                <div>
+                                    <small>
+                                        table([{ firstName: "John", lastName: "Smith" },{firstName:"Jane",lastName:"Doe"}]);
+                                    </small>
+                                    <small>
+                                        keys(object), values(object)
+                                    </small>
+                                </div>
+                            </li>
+                            
                         </ul>
                     </section>
                     <section>
@@ -169,28 +281,46 @@
                         <ul>
                             <li>use $0 to access the currently selected element</li>
                             <li>use $1-$4 to access the previous four</li>
+                            <li>
+                                Combine with other inspection commands
+                                <div>
+                                    <small>
+                                        inspect($0), dir($0), copy($0)
+                                    </small>
+                                </div>
+                            </li>
                         </ul>
-                        <pre data-trim><code data-trim>
-                            inspect($1);
-                        </code></pre>
-                        <img data-src="/img/console-inspect.png">
                     </section>
                     <section>
                         <h2>Monitor events and functions</h2>
-                        <pre data-trim><code data-trim>
-monitorEvents(window, ["resize", “scroll"]);
-unmonitorEvents(window, ["resize", “scroll"]);
-getEventListeners($0) - list event listeners of selected object
-monitor(TI.app.init);
-unmonitor(TI.app.init);
-                        </code></pre>
+                        <li>
+                            Monitor functions...
+                            <div>
+                                <small>
+                                    (un)monitor(TI.app.init), debug(TI.app.init)
+                                </small>
+                            </div>
+                        </li>
+                        <li>
+                            ...or events
+                            <div>
+                                <small>
+                                    (un)monitorEvents(window, ["resize", “scroll"]), getEventListeners($0)
+                                </small>
+                            </div>
+                        </li>
                     </section>
                     <section>
-                        <h2>much more</h2>
+                        <h2>And much more</h2>
                         <ul>
-                            <li>clear() - clear the command line window</li>
-                            <li>copy($0) - copy string representation of selected object to clipboard</li>
-                            <li>dir($0) - object representation of HTML nodes</li>
+                            <li>
+                                clear() the command line window
+                                <div>
+                                    <small>
+                                        Or <span class="kbd">Cmd</span><span class="kbd">K</span>
+                                    </small>
+                                </div>
+                            </li>
                             <li><a href="https://developer.chrome.com/devtools/docs/commandline-api">Commandline API documentation</a></li>
                         </ul>
                     </section>
@@ -203,11 +333,35 @@ unmonitor(TI.app.init);
                     <section>
                         <h2>Styles</h2>
                         <ul>
-                            <li>color picker</li>
-                            <li>easing function editor</li>
-                            <li>force element states</li>
-                            <li>control animation speed</li>
-                            <li>use arrow-keys to increment/decrement numeric properties</li>
+                            <li>
+                                Never type again!
+                                <div>
+                                    <small>
+                                        Color picker, easing function editor, control animation speed
+                                    </small>
+                                </div>
+                            </li>
+                            <li>
+                                Be lazy, or accurate, or both...
+                                <div>
+                                    <small>
+                                        Use arrow-keys and modifiers to increment/decrement numeric properties
+                                    </small>
+                                    <small style="display:block;margin-bottom:20px;">
+                                        <span class="kbd">⌥</span> ±0.1<br/>
+                                        <span class="kbd">⇧</span> ±10<br/>
+                                        <span class="kbd">⇧</span><span class="kbd">⇞</span> ±100
+                                    </small>
+                                </div>
+                            </li>
+                            <li>
+                                Use pseudo-classes
+                                <div>
+                                    <small>
+                                        :hover, do not underestimate :focus and :active for touch devices
+                                    </small>
+                                </div>
+                            </li>
                         </ul>
                     </section>
                     <section>
@@ -262,19 +416,46 @@ unmonitor(TI.app.init);
                     </section>
                 </section>
 
-                <section>
+                <section data-background-image="/img/debug.png">
                     <section>
                         <h2>Debug JavaScript</h2>
                         <ul>
-                            <li>Break with debugger; in js files or regular breakpoints</li>
-                            <li>XHR/DOM/Conditional breakpoints</li>
-                            <li>Scope variables per closure</li>
-                            <li>Call stack</li>
-                            <li>Watch expressions</li>
+                            <li class="fragment">
+                                Break the points
+                                <div>
+                                    <small>debugger; XHR, DOM, Conditional</small>
+                                </div>
+                            </li>
+                            <li class="fragment">
+                                Analyse your code
+                                <div>
+                                    <small>Scope variables, spys, evaluate</small>
+                                </div>
+                            </li>
+                            <li class="fragment">
+                                Go in depth
+                                <div>
+                                    <small>Call stack, async debugging</small>
+                                </div>
+                            </li>
                         </ul>
-                        <div class="fragment">
-                            <p><a href="http://alice.dev/cart" target="_blank">demo</a></p>
+                    </section>
+                    <section>
+                        <h2>Async Debugging</h2>
+                        <div style="float:left;width:50%;">
+                            <div>
+                                <img data-src="/img/async-diagram.gif">
+                            </div>
+                            <div>
+                                <img data-src="/img/xhr-before.gif" class="fragment">
+                            </div>
                         </div>
+                        <div style="float:right;width:50%;">
+                            <img data-src="/img/xhr-after-retry-shortened.gif" class="fragment">
+                        </div>
+                    </section>
+                    <section>
+                        <img data-src="/img/watch-expressions.gif">
                     </section>
                 </section>
 
