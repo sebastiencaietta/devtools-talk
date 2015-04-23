@@ -46,22 +46,40 @@
 				</section>
 
                 <section>
-                    <h2>Overview</h2>
-                    <ul>
-                        <li>Mobile Devices</li>
-                        <li>Enhance Productivity</li>
-                        <li>Use the Console</li>
-                        <li>Inspect Elements</li>
-                        <li>SASS Life-editing</li>
-                        <li>Debug JavaScript</li>
-                        <li>Analyse Network Traffic</li>
-                        <li>Analyse Page Speed</li>
-                        <li>Profile JavaScript</li>
-                        <li>Debug Memory Leaks</li>
-                        <li>Inspect Resources</li>
-                        <li>Run automated audits</li>
-                        <li>Extend DevTools</li>
-                    </ul>
+                    <section data-transition="fade">
+                        <h2>Overview</h2>
+                        <ul>
+                            <li>Mobile Devices</li>
+                            <li>Enhance Productivity</li>
+                            <li>Use the Console</li>
+                        </ul>
+                    </section>
+                    <section data-transition="fade">
+                        <h2>Overview</h2>
+                        <ul>
+                            <li>Inspect Elements</li>
+                            <li>SASS Life-editing</li>
+                            <li>Debug JavaScript</li>
+                        </ul>
+                    </section>
+                    <section data-transition="fade">
+                        <h2>Overview</h2>
+                        <ul>
+                            <li>Analyse Network Traffic</li>
+                            <li>Analyse Page Speed</li>
+                            <li>Profile JavaScript</li>
+                            <li>Debug Memory Leaks</li>
+                        </ul>
+                    </section>
+                    <section data-transition="fade">
+                        <h2>Overview</h2>
+                        <ul>
+                            <li>Inspect Resources</li>
+                            <li>Run automated audits</li>
+                            <li>Extending DevTools</li>
+                            <li>Hack it & Contribute</li>
+                        </ul>
+                    </section>
                 </section>
 
                 <section>
@@ -139,14 +157,6 @@
                                 Get used to keyboard shortcuts...
                                 <div>
                                     <small>...and use them!</small>
-                                </div>
-                            </li>
-                            <li>
-                                Install Chrome Canary for experimental features
-                                <div>
-                                    <small>
-                                        Or enable the Chrome Flag Devtools Experimental Features
-                                    </small>
                                 </div>
                             </li>
                             <li>
@@ -405,7 +415,9 @@
                             <li>Map files to network</li>
                             <li>Compass watch</li>
                         </ol>
-                        <small><a href="http://alice.dev/customer/account/details" target="_blank">Demo</a></small>
+                        <p class="fragment">
+                            <small><a href="http://alice.dev/customer/account/details" target="_blank">Demo</a></small>
+                        </p>
                     </section>
                     <section>
                         <h2>Content Scripts / Snippets</h2>
@@ -489,9 +501,9 @@
                         <h2>Waterfall view</h2>
                         <p>
                             <ul>
-                                <li class="fragment">look for <strong>stalled</strong> requests</li>
-                                <li class="fragment">find dns lookups and initial connections</li>
-                                <li class="fragment">watch for overly long TTFB and download times</li>
+                                <li>look for <strong>stalled</strong> requests</li>
+                                <li>find dns lookups and initial connections</li>
+                                <li>watch for overly long TTFB and download times</li>
                             </ul>
                         </p>
                         <small>turn off "Color-code resource types" setting</small>
@@ -499,13 +511,13 @@
                     <section>
                         <h2>Filter</h2>
                         <ul>
-                            <li class="fragment">hide data urls</li>
-                            <li class="fragment" style="text-align: left;">
+                            <li>hide data urls</li>
+                            <li style="text-align: left;">
                                 filter by...
                                 <ul>
-                                    <li class="fragment">status-code</li>
-                                    <li class="fragment">set-cookie-name/value</li>
-                                    <li class="fragment">has-response-header</li>
+                                    <li>status-code</li>
+                                    <li>set-cookie-name/value</li>
+                                    <li>has-response-header</li>
                                 </ul>
                             </li>
                         </ul>
@@ -513,10 +525,10 @@
                     <section>
                         <h2>and more</h2>
                         <ul>
-                            <li class="fragment">copy headers</li>
-                            <li class="fragment">copy as curl</li>
-                            <li class="fragment">replay XHR</li>
-                            <li class="fragment">save as HAR</li>
+                            <li>copy headers</li>
+                            <li>copy as curl</li>
+                            <li>replay XHR</li>
+                            <li>save as HAR</li>
                         </ul>
                     </section>
                 </section>
@@ -525,9 +537,9 @@
                     <section>
                         <h2>Analyse Page Speed</h2>
                         <ul>
-                            <li class="fragment">analyse execution order</li>
-                            <li class="fragment">layout thrashing</li>
-                            <li class="fragment">optimise animations</li>
+                            <li>analyse execution order</li>
+                            <li>layout thrashing</li>
+                            <li>optimise animations</li>
                         </ul>
                     </section>
                     <section>
@@ -606,7 +618,7 @@ console.profileEnd();   </code></pre>
                                 <div><small>Tree (Bottom up)</small></div>
                             </li>
                         </ul>
-                        <p>
+                        <p class="fragment">
                             <small><a href="http://alice.dev/womens-clothing-dresses/" target="_blank">demo</a></small>
                         </p>
                     </section>
@@ -632,7 +644,7 @@ console.profileEnd();   </code></pre>
                         <p>
                             Steady growth of lows after GC cycles indicate memory leaks.
                         </p>
-                        <p>
+                        <p class="fragment">
                             <small>
                                 <a href="http://alice.dev/womens-clothing-dresses/" target="_blank">demo</a>
                             </small>
@@ -647,9 +659,6 @@ console.profileEnd();   </code></pre>
                             <li>and/or force GC cycles in between</li>
                             <li>hit stop</li>
                         </ul>
-                        <p>
-                            <small><a href="http://alice.dev/womens-clothing-dresses/" target="_blank">demo</a></small>
-                        </p>
                     </section>
                     <section>
                         <h2>Analyse Heap Profile</h2>
@@ -659,6 +668,9 @@ console.profileEnd();   </code></pre>
                             <li>use Summary or Containment view to analyse objects</li>
                             <li>use Retainers view to trace open references</li>
                         </ul>
+                        <p class="fragment">
+                            <small><a href="http://alice.dev/womens-clothing-dresses/" target="_blank">demo</a></small>
+                        </p>
                     </section>
                 </section>
 
@@ -691,9 +703,10 @@ console.profileEnd();   </code></pre>
                 </section>
 
                 <section>
-					<h2>Extending</h2>
+					<h2>Extending DevTools</h2>
                     <p>It's all HTML/JS/CSS - no magic!</p>
 					<ul>
+                        <li>lots of good extensions available, e.g. Terminal, PHPConsole etc.</li>
                         <li>extensive <a href="https://developer.chrome.com/extensions/devtools">documentation</a> available</li>
 					</ul>
 				</section>
@@ -719,6 +732,8 @@ console.profileEnd();   </code></pre>
 					<p>
                         <ul>
                             <li>enable chrome://flags - Experimental Developer Tools Experiments</li>
+                            <li>install Chrome Canary for latest experimental features</li>
+                            <li><a href="http://anti-code.com/devtools-cheatsheet/">Cheatsheet</a></li>
                             <li><a href="http://peter.sh/experiments/chromium-command-line-switches/">Command line switches</a></li>
                         </ul>
 					</p>
