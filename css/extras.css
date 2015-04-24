@@ -21,3 +21,7 @@
 .reveal small.va-i *{
     vertical-align: initial;
 }
+
+.reveal * {
+    text-shadow: 0 0 20px rgba(0,0,0,1);
+}
