@@ -226,7 +226,7 @@
                         <h2>console.log</h2>
                         <small>and some others you might now know</small>
                         <ul>
-                            <li>
+                            <li class="fragment">
                                 Supports string substitution
                                 
                                 <div>
@@ -237,7 +237,7 @@
                                 </div>
                                 
                             </li>
-                            <li>
+                            <li class="fragment">
                                 Use the siblings for easy filtering:
                                 <div>
                                     <small>
@@ -245,7 +245,7 @@
                                     </small>
                                 </div>
                             </li>
-                            <li>
+                            <li class="fragment">
                                 Advanced usages
                                 <div>
                                     <small class="va-i">
@@ -273,19 +273,20 @@
                     </section>
                     <section>
                         <h2>Devtools Command Line</h2>
-                        <ul>
+                        <ul class="fragment">
                             <li>$(...) - return first element</li>
                             <li>$$(...) - return all elements</li>
                             <li>$x(...) - resolve xpath</li>
                             <li>$_ - return last result</li>
-                            <li>
+                            <li class="fragment">
                                 Inspect your data
                                 <div>
-                                    <small>
-                                        table([{ firstName: "John", lastName: "Smith" },{firstName:"Jane",lastName:"Doe"}]);
+                                    <small style="display:block;">
+                                        <pre data-trim style="width:100%"><code data-trim>table([{ firstName: "John", lastName: "Smith" },{firstName:"Jane",lastName:"Doe"}]);</code></pre>
                                     </small>
-                                    <small>
-                                        keys(object), values(object)
+                                    <small style="display:block;" class="va-i">
+                                        <pre data-trim style="display:inline;"><code data-trim style="display:inline;">keys(object)</code></pre>,
+                                        <pre data-trim style="display:inline;"><code data-trim style="display:inline;">values(object)</code></pre>
                                     </small>
                                 </div>
                             </li>
@@ -297,11 +298,13 @@
                         <ul>
                             <li>use $0 to access the currently selected element</li>
                             <li>use $1-$4 to access the previous four</li>
-                            <li>
+                            <li class="fragment">
                                 Combine with other inspection commands
                                 <div>
-                                    <small>
-                                        inspect($0), dir($0), copy($0)
+                                    <small style="display:block;" class="va-i">
+                                            <pre data-trim style="display:inline;"><code data-trim style="display:inline;">inspect($0)</code></pre>,
+                                            <pre data-trim style="display:inline;"><code data-trim style="display:inline;">dir($0)</code></pre>,
+                                            <pre data-trim style="display:inline;"><code data-trim style="display:inline;">copy($0)</code></pre>
                                     </small>
                                 </div>
                             </li>
@@ -309,19 +312,21 @@
                     </section>
                     <section>
                         <h2>Monitor events and functions</h2>
-                        <li>
+                        <li class="fragment">
                             Monitor functions...
                             <div>
                                 <small>
-                                    (un)monitor(TI.app.init), debug(TI.app.init)
+                                    <pre data-trim style="display:inline;"><code data-trim style="display:inline;">(un)monitor(TI.app.init)</code></pre>,
+                                    <pre data-trim style="display:inline;"><code data-trim style="display:inline;">debug(TI.app.init)</code></pre>
                                 </small>
                             </div>
                         </li>
-                        <li>
+                        <li class="fragment">
                             ...or events
                             <div>
                                 <small>
-                                    (un)monitorEvents(window, ["resize", “scroll"]), getEventListeners($0)
+                                    <pre data-trim style="display:inline;"><code data-trim style="display:inline;">(un)monitorEvents(window, ["resize", “scroll"])</code></pre>,
+                                    <pre data-trim style="display:inline;"><code data-trim style="display:inline;">getEventListeners($0)</code></pre>
                                 </small>
                             </div>
                         </li>
@@ -347,9 +352,9 @@
                         <h2>Inspect Elements</h2>
                     </section>
                     <section>
-                        <h2>Styles</h2>
+                        <h2>Style Panel</h2>
                         <ul>
-                            <li>
+                            <li class="fragment">
                                 Never type again!
                                 <div>
                                     <small>
@@ -357,7 +362,7 @@
                                     </small>
                                 </div>
                             </li>
-                            <li>
+                            <li class="fragment">
                                 Be lazy, or accurate, or both...
                                 <div>
                                     <small>
@@ -370,7 +375,7 @@
                                     </small>
                                 </div>
                             </li>
-                            <li>
+                            <li class="fragment">
                                 Use pseudo-classes
                                 <div>
                                     <small>
@@ -378,18 +383,38 @@
                                     </small>
                                 </div>
                             </li>
+                            <li class="fragment">
+                                It still doesn't work!!!
+                                <div>
+                                    <small>
+                                        Give a look to the computed styles! Or add your style to the stylesheet you want
+                                    </small>
+                                </div>
+                            </li>
                         </ul>
                     </section>
                     <section>
-                        <h2>Event Listeners</h2>
-                        <p>see event listeners attached to the selected element</p>
+                        <h2>Other features</h2>
                         <ul>
-                            <li>includes listeners reached through bubbling</li>
+                            <li class="fragment">Use your mouse
+                                <div>
+                                    <small>
+                                        Rearrange, add pseudo-class, copy css or xpath, scroll into view, break on ...
+                                    </small>
+                                </div>
+                            </li>
+                            <li class="fragment">
+                                Event Listeners and Properties Panel
+                                <div>
+                                    <small>
+                                        Inspect all listeners registered, includes listeners reached through bubbling
+                                    </small>
+                                    <small>
+                                        Check the javascript representation of elements
+                                    </small>
+                                </div>
+                            </li>
                         </ul>
-                    </section>
-                    <section>
-                        <h2>DOM Breakpoints</h2>
-                        <p>make scripts halt on DOM manipulations</p>
                     </section>
                     <section>
                         <h2>Extensions</h2>
@@ -405,21 +430,21 @@
                         <h2>Sources</h2>
                         <ul>
                             <li><span class="kbd">⌘</span><span class="kbd">O</span> or <span class="kbd">⌘</span><span class="kbd">P</span> to open any file from anywhere</li>
-                            <li><span class="kbd">⌘</span><span class="kbd">⇧</span><span class="kbd">F</span> from anywhere to find stuff in any files</li>
+                            <li><span class="kbd">⌘</span><span class="kbd">⌥</span><span class="kbd">F</span> from anywhere to find stuff in any files</li>
                             <li><span class="kbd">⌘</span><span class="kbd">⇧</span><span class="kbd">O</span> to find methods/selectors within that file</li>
                             <li>use pretty-print {} button to reformat compacted files</li>
                         </ul>
                     </section>
                     <section>
-                        <h2>Life-editing SASS files</h2>
+                        <h2>Life-editing SASS files in 7 steps</h2>
                         <ol>
-                            <li>Compass 1.0 + SASS 3.4</li>
-                            <li>Add {sourcemap => true} in config.rb</li>
-                            <li>Remove hashes in Assetic</li>
-                            <li>Enable css source maps in DevTools</li>
-                            <li>Add folder to workspace</li>
-                            <li>Map files to network</li>
-                            <li>Compass watch</li>
+                            <li class="fragment">Compass 1.0 + SASS 3.4</li>
+                            <li class="fragment">Add <pre data-trim style="display:inline;vertical-align:middle;"><code data-trim style="display:inline;vertical-align:text-bottom;">{sourcemap => true}</code></pre> in config.rb</li>
+                            <li class="fragment">Remove hashes in Assetic</li>
+                            <li class="fragment">Enable css source maps in DevTools</li>
+                            <li class="fragment">Add folder to workspace</li>
+                            <li class="fragment">Map files to network</li>
+                            <li class="fragment">Compass watch</li>
                         </ol>
                         <p class="fragment">
                             <small><a href="http://alice.dev/customer/account/details" target="_blank">Demo</a></small>
