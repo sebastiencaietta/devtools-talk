@@ -173,19 +173,19 @@
                         <h2>Use the keyboard</h2>
                         <ul>
                             <li>
-                                <span class="kbd">Cmd</span><span class="kbd">Opt</span><span class="kbd">I</span> - toggle dev tools
+                                <span class="kbd">⌘</span><span class="kbd">⌥</span><span class="kbd">I</span> - toggle dev tools
                                 <div>
                                     <small style="vertical-align: middle;">
                                         J to focus directly on console
                                     </small>
                                 </div>
                             </li>
-                            <li><span class="kbd">Esc</span> - toggle Console drawer</li>
-                            <li>use <span class="kbd">Cmd</span>+<span class="kbd">0</span>/<span class="kbd">-</span>/<span class="kbd">+</span> to zoom</li>
-                            <li>Enable <span class="kbd">Cmd</span> + <span class="kbd">1</span>-<span class="kbd">9</span> shortcut to switch panels</li>
-                            <li><span class="kbd">Cmd</span><span class="kbd">O</span> - open any loaded file anytime</li>
+                            <li><span class="kbd">⎋</span> - toggle Console drawer</li>
+                            <li>use <span class="kbd">⌘</span>+<span class="kbd">0</span>/<span class="kbd">-</span>/<span class="kbd">+</span> to zoom</li>
+                            <li>Enable <span class="kbd">⌘</span> + <span class="kbd">1</span>-<span class="kbd">9</span> shortcut to switch panels</li>
+                            <li><span class="kbd">⌘</span><span class="kbd">O</span> - open any loaded file anytime</li>
                             <li>
-                                <span class="kbd">Cmd</span><span class="kbd">Shift</span><span class="kbd">F</span> - search for text in loaded files anytime
+                                <span class="kbd">⌘</span><span class="kbd">⇧</span><span class="kbd">F</span> - search for text in loaded files anytime
                                 <div>
                                     <small style="vertical-align: middle;">
                                         C to open in inspection element mode
@@ -232,7 +232,7 @@
                                 <div>
                                     <small>
                                     <pre data-trim style="width:100%;"><code data-trim>console.log("%s has %d points", "Sam", 100);</code></pre>
-                                    Also %c for css styles and %o / %O for Node/javascript representation
+                                    Also <span style="color:#EFDCBC">%c</span> for css styles and <span style="color:#EFDCBC">%o</span> / <span style="color:#EFDCBC">%O</span> for Node/javascript representation
                                     </small>
                                 </div>
                                 
@@ -241,24 +241,30 @@
                                 Use the siblings for easy filtering:
                                 <div>
                                     <small>
-                                        warn(), error(), info(), debug()
+                                        <span style="color:#F5BD00;">warn()</span>, <span style="color:#EB3941;">error()</span>, <span style="color:#2A53CD;">info()</span>, <span style="color:#5D7CD9;">debug()</span>
                                     </small>
                                 </div>
                             </li>
                             <li>
                                 Advanced usages
                                 <div>
-                                    <small>
-                                        Grouping with group('logging'), console.log('Getting data from DB', logging), groupEnd()
+                                    <small class="va-i">
+                                        Grouping with 
+                                        <pre data-trim style="display:inline;"><code data-trim style="display:inline;">group('logging')</code></pre>, 
+                                        <pre data-trim style="display:inline;"><code data-trim style="display:inline;">console.log('Getting data from DB', logging)</code></pre>, 
+                                        <pre data-trim style="display:inline;"><code data-trim style="display:inline;">groupEnd()</code></pre>
                                     </small>
-                                    <small>
-                                        Get a call stack of your execution point with console.trace()
+                                    <small class="va-i">
+                                        Get a call stack of your execution point with <pre data-trim style="display:inline;"><code data-trim style="display:inline;">console.trace()</code></pre>
                                     </small>
-                                    <small>
-                                        Log timing with time('logging'), timeEnd('logging')
+                                    <small class="va-i">
+                                        Log timing with 
+                                        <pre data-trim style="display:inline;"><code data-trim style="display:inline;">time('logging')</code></pre>, 
+                                        <pre data-trim style="display:inline;"><code data-trim style="display:inline;">timeEnd('logging')</code></pre>
                                     </small>
-                                    <small>
-                                        Show on the timeline panel when your script is executed with console.timeStamp('my-script')
+                                    <small class="va-i">
+                                        Show on the timeline panel when your script is executed with 
+                                        <pre data-trim style="display:inline;"><code data-trim style="display:inline;">console.timeStamp('my-script')</code></pre>
                                     </small>
 
                                 </div>
@@ -327,7 +333,7 @@
                                 clear() the command line window
                                 <div>
                                     <small>
-                                        Or <span class="kbd">Cmd</span><span class="kbd">K</span>
+                                        Or <span class="kbd">⌘</span><span class="kbd">K</span>
                                     </small>
                                 </div>
                             </li>
@@ -398,9 +404,9 @@
                     <section>
                         <h2>Sources</h2>
                         <ul>
-                            <li><span class="kbd">Cmd</span><span class="kbd">O</span> or <span class="kbd">Cmd</span><span class="kbd">P</span> to open any file from anywhere</li>
-                            <li><span class="kbd">Cmd</span><span class="kbd">Shift</span><span class="kbd">F</span> from anywhere to find stuff in any files</li>
-                            <li><span class="kbd">Cmd</span><span class="kbd">Shift</span><span class="kbd">O</span> to find methods/selectors within that file</li>
+                            <li><span class="kbd">⌘</span><span class="kbd">O</span> or <span class="kbd">⌘</span><span class="kbd">P</span> to open any file from anywhere</li>
+                            <li><span class="kbd">⌘</span><span class="kbd">⇧</span><span class="kbd">F</span> from anywhere to find stuff in any files</li>
+                            <li><span class="kbd">⌘</span><span class="kbd">⇧</span><span class="kbd">O</span> to find methods/selectors within that file</li>
                             <li>use pretty-print {} button to reformat compacted files</li>
                         </ul>
                     </section>

@@ -17,3 +17,7 @@
     border-radius: 0.3em;
     vertical-align: middle;
 }
+
+.reveal small.va-i *{
+    vertical-align: initial;
+}
