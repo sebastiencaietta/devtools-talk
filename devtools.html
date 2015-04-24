@@ -153,13 +153,13 @@
                     <section>
                         <h2>Enhance Productivity</h2>
                         <ul>
-                            <li>
+                            <li class="fragment">
                                 Get used to keyboard shortcuts...
                                 <div>
                                     <small>...and use them!</small>
                                 </div>
                             </li>
-                            <li>
+                            <li class="fragment">
                                 Explore settings
                                 <div>
                                     <small>
@@ -507,9 +507,9 @@
                         <h2>Waterfall view</h2>
                         <p>
                             <ul>
-                                <li>look for <strong>stalled</strong> requests</li>
-                                <li>find dns lookups and initial connections</li>
-                                <li>watch for overly long TTFB and download times</li>
+                                <li class="fragment">look for <strong>stalled</strong> requests</li>
+                                <li class="fragment">find dns lookups and initial connections</li>
+                                <li class="fragment">watch for overly long TTFB and download times</li>
                             </ul>
                         </p>
                         <small>turn off "Color-code resource types" setting</small>
@@ -517,8 +517,8 @@
                     <section>
                         <h2>Filter</h2>
                         <ul>
-                            <li>hide data urls</li>
-                            <li style="text-align: left;">
+                            <li class="fragment">hide data urls</li>
+                            <li style="text-align: left;" class="fragment">
                                 filter by...
                                 <ul>
                                     <li>status-code</li>
@@ -550,53 +550,55 @@
                     </section>
                     <section>
                         <h2>Timeline</h2>
+                        <p>great tool for performance and execution analysis</p>
                         <ul>
-                            <li>
+                            <li class="fragment">
                                 3 async layers
                                 <ul>
                                     <li><span style="color: cornflowerblue;">Network</span></li>
                                     <li><span style="color: gold;">Javascript</span></li>
                                     <li><span style="color: blueviolet;">Layout,</span> <span style="color: green;">Paint & Compositing</span></li>
                                 </ul>
-                            <li>look for gaps and blockers</li>
-                            <li>add markers via console.timeStamp()</li>
+                            <li class="fragment">look for gaps and blockers</li>
+                            <li class="fragment">add markers via console.timeStamp()</li>
                         </ul>
                     </section>
                     <section>
                         <h2>Events View</h2>
                         <p>shows in-depth view of what happens when</p>
                         <ul>
-                            <li>activate 'Causes'</li>
-                            <li>activate 'Paint' to see snapshots of painted areas</li>
-                            <li>grouped events illustrate causalities</li>
-                            <li>grey cpu load bars at top</li>
-                            <li>forced layouts marked by warning triangles</li>
-                            <li>pay attention to Aggregated Time, Total Time & Self Time</li>
+                            <li class="fragment">activate 'Causes'</li>
+                            <li class="fragment">activate 'Paint' to see snapshots of painted areas</li>
+                            <li class="fragment">grouped events illustrate causalities</li>
+                            <li class="fragment">grey cpu load bars at top</li>
+                            <li class="fragment">forced layouts marked by warning triangles</li>
+                            <li class="fragment">pay attention to Aggregated Time, Total Time & Self Time</li>
                         </ul>
                     </section>
                     <section>
                         <h2>Flame Chart View</h2>
+                        <p>visual execution overview</p>
                         <ul>
-                            <li>use <span class="kbd">W</span><span class="kbd">A</span><span class="kbd">S</span><span class="kbd">D</span> keys to navigate</li>
-                            <li>forced layouts marked by red corners</li>
-                            <li>look for horizontally large strips</li>
+                            <li class="fragment">use <span class="kbd">W</span><span class="kbd">A</span><span class="kbd">S</span><span class="kbd">D</span> keys to navigate</li>
+                            <li class="fragment">forced layouts marked by red corners</li>
+                            <li class="fragment">look for horizontally large strips</li>
                         </ul>
                     </section>
                     <section>
                         <h2>Frames View</h2>
+                        <p>shows animation frames</p>
                         <ul>
-                            <li>use for Paint/Compositing optimisation</li>
-                            <li>shows animation frames</li>
-                            <li>look for large frames and events that exceed frames</li>
+                            <li class="fragment">use for Paint/Compositing optimisation</li>
+                            <li class="fragment">look for large frames and events that exceed frames</li>
                         </ul>
                     </section>
                     <section>
                         <h2>Memory View</h2>
+                        <p>spot memory leaks</p>
                         <ul>
-                            <li>use to spot memory leaks</li>
-                            <li>use trashcan icon to force GC cycles</li>
-                            <li>look for increasing memory base line after GC cycles</li>
-                            <li>look for increase in listeners, DOM nodes and JS objects</li>
+                            <li class="fragment">use trashcan icon to force GC cycles</li>
+                            <li class="fragment">look for increasing memory base line after GC cycles</li>
+                            <li class="fragment">look for increase in listeners, DOM nodes and JS objects</li>
                         </ul>
                     </section>
 				</section>
@@ -605,21 +607,21 @@
                     <section data-background-image="/img/hourglass.jpg">
                         <h2>Profile JavaScript</h2>
                         <ul>
-                            <li>
+                            <li class="fragment">
                                 create from JS
                             <pre><code>console.profile();
 ...
 console.profileEnd();   </code></pre>
                             </li>
-                            <li>
+                            <li class="fragment">
                                 visualize JS execution by time
                                 <div><small>Chart</small></div>
                             </li>
-                            <li>
+                            <li class="fragment">
                                 find most time consuming methods
                                 <div><small>Heavy (Bottom up)</small></div>
                             </li>
-                            <li>
+                            <li class="fragment">
                                 drill down through execution tree
                                 <div><small>Tree (Bottom up)</small></div>
                             </li>
@@ -634,18 +636,18 @@ console.profileEnd();   </code></pre>
                     <section data-background-image="/img/neurons.jpg">
                         <h2>Debug Memory Leaks</h2>
                         <ul>
-                            <li>identify in Timeline</li>
+                            <li class="fragment">identify in Timeline</li>
                             <li>debug in Heap Profiler</li>
                         </ul>
                     </section>
                     <section>
                         <h2>Identify memory leaks in Timeline</h2>
                         <ul>
-                            <li>activate Memory view</li>
-                            <li>execute suspicious action(s)</li>
-                            <li>execute steps to rewind to original state</li>
-                            <li>hit trashcan button to force GC cycle</li>
-                            <li>repeat at least 5 times</li>
+                            <li class="fragment">activate Memory view</li>
+                            <li class="fragment">execute suspicious action(s)</li>
+                            <li class="fragment">execute steps to rewind to original state</li>
+                            <li class="fragment">hit trashcan button to force GC cycle</li>
+                            <li class="fragment">repeat at least 5 times</li>
                         </ul>
                         <p>
                             Steady growth of lows after GC cycles indicate memory leaks.
@@ -659,20 +661,20 @@ console.profileEnd();   </code></pre>
                     <section>
                         <h2>Create Heap Profile</h2>
                         <ul>
-                            <li>open incognito Window</li>
-                            <li>select Record Heap Allocations and hit start</li>
-                            <li>execute actions and repeat at least 5 times</li>
-                            <li>and/or force GC cycles in between</li>
-                            <li>hit stop</li>
+                            <li class="fragment">open incognito Window</li>
+                            <li class="fragment">select Record Heap Allocations and hit start</li>
+                            <li class="fragment">execute actions and repeat at least 5 times</li>
+                            <li class="fragment">and/or force GC cycles in between</li>
+                            <li class="fragment">hit stop</li>
                         </ul>
                     </section>
                     <section>
                         <h2>Analyse Heap Profile</h2>
                         <ul>
-                            <li>blue lines are leftover objects</li>
-                            <li>use timeline to narrow to a section</li>
-                            <li>use Summary or Containment view to analyse objects</li>
-                            <li>use Retainers view to trace open references</li>
+                            <li class="fragment">blue lines are leftover objects</li>
+                            <li class="fragment">use timeline to narrow to a section</li>
+                            <li class="fragment">use Summary or Containment view to analyse objects</li>
+                            <li class="fragment">use Retainers view to trace open references</li>
                         </ul>
                         <p class="fragment">
                             <small><a href="http://alice.dev/womens-clothing-dresses/" target="_blank">demo</a></small>
@@ -683,19 +685,19 @@ console.profileEnd();   </code></pre>
                 <section data-background-image="/img/treasure.jpg">
                     <h2>Inspect Resources</h2>
                     <ul>
-                        <li>loaded resources</li>
-                        <li>Cookies</li>
-                        <li>localStorage</li>
-                        <li>sessionStorage</li>
-                        <li>IndexedDb</li>
-                        <li>Application Cache</li>
+                        <li class="fragment">loaded resources</li>
+                        <li class="fragment">Cookies</li>
+                        <li class="fragment">localStorage</li>
+                        <li class="fragment">sessionStorage</li>
+                        <li class="fragment">IndexedDb</li>
+                        <li class="fragment">Application Cache</li>
                     </ul>
                 </section>
 
                 <section data-background-image="/img/audit.jpg">
                     <section>
                         <h2>Run automated audits</h2>
-                        <ul>
+                        <ul class="fragment">
                             <li>use Web Page Performance audits</li>
                         </ul>
                     </section>
@@ -712,8 +714,8 @@ console.profileEnd();   </code></pre>
 					<h2>Extending DevTools</h2>
                     <p>It's all HTML/JS/CSS - no magic!</p>
 					<ul>
-                        <li>lots of good extensions available, e.g. Terminal, PHPConsole etc.</li>
-                        <li>extensive <a href="https://developer.chrome.com/extensions/devtools">documentation</a> available</li>
+                        <li class="fragment">lots of good extensions available, e.g. Terminal, PHPConsole etc.</li>
+                        <li class="fragment">extensive <a href="https://developer.chrome.com/extensions/devtools">documentation</a> available</li>
 					</ul>
 				</section>
 
@@ -721,9 +723,9 @@ console.profileEnd();   </code></pre>
                     <h2>Hack it & Contribute</h2>
                     <p>It's all HTML/JS/CSS - no magic!</p>
                     <ul>
-                        <li>grab a <a href="http://commondatastorage.googleapis.com/chromium-browser-continuous/index.html">devtools-frontend.zip</a></li>
-                        <li>extract it to some <strong>dir</strong></li>
-                        <li>
+                        <li class="fragment">grab a <a href="http://commondatastorage.googleapis.com/chromium-browser-continuous/index.html">devtools-frontend.zip</a></li>
+                        <li class="fragment">extract it to some <strong>dir</strong></li>
+                        <li class="fragment">
                             <div>run chrome with</div>
                             <small><code>--debug-devtools-frontend=<strong>dir</strong></code></small>
                         </li>
@@ -737,10 +739,10 @@ console.profileEnd();   </code></pre>
 					<h2>And much more...</h2>
 					<p>
                         <ul>
-                            <li>enable chrome://flags - Experimental Developer Tools Experiments</li>
-                            <li>install Chrome Canary for latest experimental features</li>
-                            <li><a href="http://anti-code.com/devtools-cheatsheet/">Cheatsheet</a></li>
-                            <li><a href="http://peter.sh/experiments/chromium-command-line-switches/">Command line switches</a></li>
+                            <li class="fragment">enable chrome://flags - Experimental Developer Tools Experiments</li>
+                            <li class="fragment">install Chrome Canary for latest experimental features</li>
+                            <li class="fragment"><a href="http://anti-code.com/devtools-cheatsheet/">Cheatsheet</a></li>
+                            <li class="fragment"><a href="http://peter.sh/experiments/chromium-command-line-switches/">Command line switches</a></li>
                         </ul>
 					</p>
 				</section>
