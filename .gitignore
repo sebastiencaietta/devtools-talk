@@ -1,2 +1,3 @@
 .DS_Store
 js/reveal.min.js
+node_modules/
