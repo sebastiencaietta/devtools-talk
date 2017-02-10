@@ -116,7 +116,7 @@
                             Adds must complexity, used as a proxy
                         </li>
                         <li class="fragment">
-                            It's not its responsibility anyway
+                            It's not its responsibility, anyway
                         </li>
                     </ul>
                 </section>
@@ -129,11 +129,11 @@
                     </section>
                     <section>
                         <h2>The initial idea</h2>
-                        <!-- INSERT ORIGINAL ARCHITECTURE HERE -->
+                        <img src="./img/initial_structure.png" />
                     </section>
                     <section>
                         <h2>The final solution</h2>
-                        <!-- INSERT FINAL ARCHITECTURE HERE -->
+                        <img src="./img/final_structure.png" />
                     </section>
                 </section>
 
@@ -180,32 +180,89 @@
                     </section>
                 </section>
 
+                <!-- Aws Lambda -->
                 <section>
-                    <section>
-                        <h2>AWS Lambda</h2>
-                        <ul>
-                            <li class="fragment">
-                                Responsibilities
-                                <ul>
-                                    <li>
-                                        Validates incoming requests
-                                    </li>
-                                    <li>
-                                        Adds an event to bob queue (if event is a push request)
-                                    </li>
-                                    <li>
-                                        Adds the event to MySQL
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="fragment">
-                                Programming Language
-                            </li>
-                            <li class="fragment">
-                                Configuration
-                            </li>
-                        </ul>
-                    </section>
+                    <h2>AWS Lambda</h2>
+                    <ul>
+                        <li class="fragment">
+                            Responsibilities
+                            <ul>
+                                <li>
+                                    Validates incoming requests
+                                </li>
+                                <li>
+                                    Adds an event to bob queue (if event is a push request)
+                                </li>
+                                <li>
+                                    Adds the event to MySQL
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <!-- Aws Lambda -->
+                <section>
+                    <h2>AWS Lambda</h2>
+                    <ul>
+                        <li>
+                            Configuration
+                            <ul>
+                                <li class="fragment">VPC</li>
+                                <li class="fragment">Subnets</li>
+                                <li class="fragment">Security Group</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>aws lambda</h2>
+                    <ul>
+                        <li>
+                            lambda code
+                            <ul>
+                                <li class="fragment">Written in python2.7</li>
+                                <li class="fragment">Hosted in s3</li>
+                                <li class="fragment">Code sample
+                                    <pre>
+def producer_handler(event, context):
+    ... api key validation ...
+
+    worker = crmworker()
+    responses = worker.produce(body, [
+        get_resque_producer(),
+        get_mysql_producer()
+    ])
+    print responses
+    return responses
+                                    </pre>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>aws lambda</h2>
+                    <ul>
+                        <li>
+                            lambda code
+                            <ul>
+                                <li class="fragment">Response sample
+                                    <pre>
+{
+	'responses': [
+	  'Job Pushed to redis, user id 1234, subject subejct, redis response: 2.', 
+	  'Data produced to mysql successfully'
+	],
+	'start_time': '2017-02-09 23:25:12',
+	'stop_time': '2017-02-09 23:25:12',
+	'event': {
+	}
+}
+                                    </pre>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </section>
 
                 <section>
