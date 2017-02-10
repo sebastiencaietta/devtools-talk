@@ -48,6 +48,7 @@
                 <section data-transition="fade">
                     <h2>Outline</h2>
                     <ul>
+                        <li>Serverless Applications</li>
                         <li>Project Introduction</li>
                         <li>Why not Wall-e?</li>
                         <li>Project Architecture</li>
@@ -57,6 +58,30 @@
                     </ul>
                 </section>
 
+                <!-- Servless Application Overview -->
+                <section>
+                    <section>
+                        <h2>What is Serverless?</h2>
+						<div style="display: flex; justify-content: space-between; align-items: center;">
+							<div style="flex: 0 1 50%; padding-right: 40px; text-align: justify;">
+								<p style="font-size: 30px;">
+	An application is said to be serverless when it runs in stateless compute containers that are event-triggered, ephemeral (may only last for one invocation), and fully managed by a 3rd party.
+								</p>
+								<p style="font-size: 30px;">
+	Serverless applications are easy to manage, they provide high availability and perform at any scale.
+								</p>
+							</div>
+                            <div style="flex: 1 0 50%">
+                                <img src="./img/serverless_example.png">
+                            </div>
+						</div>
+                    </section>
+                    <section>
+                        <h2>Serverless in AWS</h2>
+                        <img src="./img/faas.png" />
+
+                    </section>
+                </section>
                 <!-- <section data-background-image="/img/mobile.jpg"> -->
                 <!-- Project Introduction -->
                 <section>
@@ -105,11 +130,11 @@
                     <h2>Why not Wall-e?</h2>
                     <ul>
                         <li class="fragment">
-                            Adds must complexity, used as a proxy
-                        </li>
-                        <li class="fragment">
                             Receives too many requests
                             <img src="img/walle_throughput.png" />
+                        </li>
+                        <li class="fragment">
+                            Adds must complexity, used as a proxy
                         </li>
                         <li class="fragment">
                             It's not its responsibility anyway
@@ -120,7 +145,7 @@
                 <!-- CRM Data Structure -->
                 <section data-background-color="#374c70">
                     <section>
-                        <h2>CRM Data Structure</h2>    
+                        <h2>Project Architecture</h2>
                     </section>
                     <section>
                         <h2>The initial idea</h2>
@@ -128,7 +153,7 @@
                     </section>
                     <section>
                         <h2>Kinesis x MySQL</h2>
-                        <ul class="fragment">
+                        <ul>
                             <li class="fragment">
                                 <h3>Kinesis</h3>
                                 <ul>
@@ -177,16 +202,24 @@
                                     <small>
                                         No resources, 1 POST Method
                                     </small>
+                                </div>
+                                <div>
                                     <small>
                                         Lambda Integration
                                     </small>
+                                </div>
+                                <div>
                                     <small>
                                         API key passed through to Lambda
                                         <!-- Image -->
                                     </small>
+                                </div>
+                                <div>
                                     <small>
                                         Method / Integration Response
                                     </small>
+                                </div>
+                                <div>
                                     <small>
                                         Custom Domain Names
                                     </small>
@@ -284,7 +317,7 @@ def producer_handler(event, context):
 
                 <section>
                     <section>
-                        <h2>Orchestration, CI/CD</h2>
+                        <h2>Stack Integration</h2>
                         <ul>
                             <li class="fragment">How to deploy lambda functions</li>
                             <li class="fragment">Stack integration</li>
