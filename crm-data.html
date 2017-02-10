@@ -53,7 +53,6 @@
                         <li>Project Architecture</li>
                         <li>AWS API Gateway</li>
                         <li>AWS Lambda</li>
-                        <li>Kinesis x MySQL</li>
                         <li>Stack Integration</li>
                     </ul>
                 </section>
@@ -125,15 +124,37 @@
                 <!-- CRM Data Structure -->
                 <section>
                     <section>
-                        <h2>CRM Data Strcture</h2>    
+                        <h2>CRM Data Structure</h2>    
                     </section>
                     <section>
                         <h2>The initial idea</h2>
-                        <img src="./img/initial_structure.png" />
+                        <img style="background-color: #fff" src="./img/initial_structure.png" />
+                    </section>
+                    <section>
+                        <h2>Kinesis x MySQL</h2>
+                        <ul class="fragment">
+                            <li class="fragment">
+                                <h3>Kinesis</h3>
+                                <ul>
+                                    <li class="fragment">How to produce/consume data from kinesis?</li>
+                                    <li class="fragment">How to organize events in S3?</li>
+                                    <li class="fragment">Save money :)</li>
+                                </ul>
+                                <br />
+                            </li>
+                            <li class="fragment">
+                                <h3>MySQL</h3>
+                                <ul>
+                                    <li class="fragment">DW alredy has a MySQL Resource</li>
+                                    <li class="fragment">Easier for DW to query</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
                     </section>
                     <section>
                         <h2>The final solution</h2>
-                        <img src="./img/final_structure.png" />
+                        <img style="background-color: #fff" src="./img/final_structure.png" />
                     </section>
                 </section>
 
@@ -227,7 +248,7 @@
 def producer_handler(event, context):
     ... api key validation ...
 
-    worker = crmworker()
+    worker = CrmWorker()
     responses = worker.produce(body, [
         get_resque_producer(),
         get_mysql_producer()
@@ -256,6 +277,7 @@ def producer_handler(event, context):
 	'start_time': '2017-02-09 23:25:12',
 	'stop_time': '2017-02-09 23:25:12',
 	'event': {
+        ...
 	}
 }
                                     </pre>
